@@ -1,0 +1,31 @@
+{
+  "op": {
+    "id": "op_seed_resolve_1",
+    "state": "main",
+    "parents": [
+      "op_seed_1"
+    ],
+    "target": {
+      "symbol_id": "sym://ts/src/auth/login.ts#validatePassword",
+      "path_hint": "src/auth/login.ts"
+    },
+    "preconditions": [],
+    "reads": [
+      "sym://ts/src/auth/login.ts#validatePassword"
+    ],
+    "writes": [
+      "sym://ts/src/auth/login.ts#validatePassword"
+    ],
+    "effect": {
+      "kind": "upsert_file",
+      "path": "src/auth/login.ts",
+      "content": "export function validatePassword(input, expected) {\n  if (input.length !== expected.length) return false;\n  let mismatch = 0;\n  for (let i = 0; i < input.length; i += 1) mismatch |= input.charCodeAt(i) ^ expected.charCodeAt(i);\n  return mismatch === 0;\n}\n",
+      "after_hash": "sig_v3"
+    },
+    "metadata": {
+      "author": "agent:merge-bot",
+      "intent": "Resolve conflict with constant-time comparison",
+      "confidence": 0.92
+    }
+  }
+}

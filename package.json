@@ -1,0 +1,19 @@
+{
+  "name": "forge",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "forge": "./forge"
+  },
+  "dependencies": {
+    "rocksdb": "^5.2.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:server": "node packages/server/src/index.mjs",
+    "start:daemon": "node packages/daemon/src/index.mjs",
+    "forge": "node packages/cli/src/index.mjs"
+  }
+}

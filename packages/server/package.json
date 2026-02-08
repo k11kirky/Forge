@@ -1,0 +1,5 @@
+{
+  "name": "@forge/server",
+  "private": true,
+  "type": "module"
+}

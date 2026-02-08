@@ -1,0 +1,29 @@
+{
+  "op": {
+    "id": "op_seed_1",
+    "state": "main",
+    "parents": [],
+    "target": {
+      "symbol_id": "sym://ts/src/auth/login.ts#validatePassword",
+      "path_hint": "src/auth/login.ts"
+    },
+    "preconditions": [],
+    "reads": [
+      "sym://ts/src/auth/login.ts#validatePassword"
+    ],
+    "writes": [
+      "sym://ts/src/auth/login.ts#validatePassword"
+    ],
+    "effect": {
+      "kind": "upsert_file",
+      "path": "src/auth/login.ts",
+      "content": "export function validatePassword(input, expected) {\n  return input.length === expected.length && input === expected;\n}\n",
+      "after_hash": "sig_v1"
+    },
+    "metadata": {
+      "author": "agent:security",
+      "intent": "Seed initial function",
+      "confidence": 0.9
+    }
+  }
+}

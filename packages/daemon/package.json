@@ -1,0 +1,5 @@
+{
+  "name": "@forge/daemon",
+  "private": true,
+  "type": "module"
+}
